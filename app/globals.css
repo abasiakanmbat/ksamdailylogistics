@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  * {
+    @apply border-slate-200;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#f3f6fb] text-slate-950 antialiased;
+    background-image: radial-gradient(
+      circle at top left,
+      rgba(126, 221, 151, 0.08),
+      transparent 22%
+    );
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .container-shell {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-20 sm:py-24;
+  }
+
+  .surface-card {
+    @apply rounded-[28px] border border-slate-200/80 bg-white shadow-soft;
+  }
+
+  .surface-card-dark {
+    @apply rounded-[28px] border border-white/10 bg-white/5 shadow-soft backdrop-blur;
+  }
+
+  .badge-kicker {
+    @apply inline-flex rounded-full border border-[#8BCB8D]/30 bg-[#8BCB8D]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#b7ebb8];
+  }
+}
+
+@utility shadow-soft {
+  box-shadow: 0 18px 60px rgba(2, 12, 27, 0.08);
+}
+
+@utility shadow-panel {
+  box-shadow: 0 30px 90px rgba(2, 12, 27, 0.28);
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility hero-mesh {
+  background:
+    radial-gradient(circle at 0% 15%, rgba(111, 197, 114, 0.32), transparent 28%),
+    radial-gradient(circle at 100% 70%, rgba(69, 176, 113, 0.2), transparent 24%),
+    linear-gradient(90deg, #071428 0%, #020b1d 42%, #031125 100%);
+}
+
+@utility hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+
+@utility section-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 38px 38px;
 }

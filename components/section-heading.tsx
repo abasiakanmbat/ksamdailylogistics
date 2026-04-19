@@ -19,12 +19,12 @@ export function SectionHeading({
   const descriptionClass = theme === "dark" ? "text-slate-300" : "text-slate-600";
 
   return (
-    <div className={`max-w-3xl ${alignment}`}>
+    <div className={`section-heading-root max-w-3xl ${alignment}`}>
       {eyebrow ? (
         <p className={`mb-3 text-sm font-semibold uppercase tracking-[0.22em] ${eyebrowClass}`}>{eyebrow}</p>
       ) : null}
-      <h2 className={`text-balance text-3xl font-semibold tracking-tight sm:text-4xl ${titleClass}`}>{title}</h2>
-      {description ? <p className={`mt-4 text-lg leading-8 ${descriptionClass}`}>{description}</p> : null}
+      <h2 className={`section-heading-title ${titleClass}`}>{title}</h2>
+      {description ? <p className={`section-heading-description ${descriptionClass}`}>{description}</p> : null}
     </div>
   );
 }

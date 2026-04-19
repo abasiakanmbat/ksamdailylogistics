@@ -3,7 +3,7 @@ const fieldClassName =
 
 export function QuoteForm() {
   return (
-    <form id="quote-form" className="surface-card p-6 sm:p-8">
+    <form id="quote-form" className="surface-card cq-form quote-form-shell">
       <div className="mb-8">
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#2F7A3A]">Get a quote</p>
         <h3 className="mt-3 text-2xl font-semibold text-slate-950">Book a courier service consultation</h3>
@@ -13,7 +13,7 @@ export function QuoteForm() {
         </p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="quote-form-grid">
         <input className={fieldClassName} placeholder="Sender name" name="senderName" />
         <input className={fieldClassName} placeholder="Sender phone" name="senderPhone" />
         <input className={fieldClassName} placeholder="Sender email" name="senderEmail" type="email" />

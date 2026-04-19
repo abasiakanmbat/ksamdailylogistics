@@ -18,9 +18,9 @@ export default function AboutPage() {
         secondaryCta={{ href: "/services", label: "View services" }}
       />
 
-      <section className="section-space bg-white">
+      <section className="cq-section section-space bg-white">
         <div className="container-shell">
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="cq-grid-2">
             {missionVision.map((item) => (
               <article key={item.title} className="surface-card p-8">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2F7A3A]">{item.title}</p>
@@ -31,7 +31,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-space">
+      <section className="cq-section section-space">
         <div className="container-shell">
           <SectionHeading
             eyebrow="What we do"
@@ -39,7 +39,7 @@ export default function AboutPage() {
             description="Kamdan supports same-day runs, eCommerce movement, corporate logistics, express dispatch, and safe short-term storage where needed."
           />
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="cq-grid-3 mt-12">
             {whatWeDo.map((item) => {
               const Icon = item.icon;
               return (
@@ -56,8 +56,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#020817] py-20 sm:py-24">
-        <div className="container-shell grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-start">
+      <section className="cq-section section-space bg-[#020817]">
+        <div className="container-shell cq-split cq-split-about">
           <div>
             <SectionHeading
               eyebrow="Why choose us"

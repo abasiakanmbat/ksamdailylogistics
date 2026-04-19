@@ -19,7 +19,7 @@ export default function ServicesPage() {
         secondaryCta={{ href: "/about", label: "Learn about Kamdan" }}
       />
 
-      <section className="section-space bg-white">
+      <section className="cq-section section-space bg-white">
         <div className="container-shell">
           <SectionHeading
             eyebrow="Service lines"
@@ -28,7 +28,7 @@ export default function ServicesPage() {
             align="center"
           />
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="cq-grid-3 mt-12">
             {servicesPageCards.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -58,8 +58,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section-space">
-        <div className="container-shell grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+      <section className="cq-section section-space">
+        <div className="container-shell cq-split cq-split-services">
           <div>
             <SectionHeading
               eyebrow="Courier focus"
@@ -80,7 +80,7 @@ export default function ServicesPage() {
               Answer a few simple questions, request a quote, and get matched with the right vehicle and
               service type for your route, timing, and load size.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="cq-actions mt-8">
               <Link
                 href="/fleet#quote-form"
                 className="inline-flex items-center rounded-full bg-[#7ed38a] px-6 py-3 text-sm font-semibold text-[#031020] transition hover:bg-[#98dfa1]"

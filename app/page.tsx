@@ -23,9 +23,9 @@ export default function HomePage() {
         secondaryCta={{ href: "/services", label: "View services" }}
       />
 
-      <section className="relative z-10 -mt-16 sm:-mt-20">
+      <section className="cq-section relative z-10 -mt-16">
         <div className="container-shell">
-          <div className="grid gap-5 lg:grid-cols-3">
+          <div className="cq-grid-3 gap-5">
             {heroSupportCards.map((item) => (
               <article key={item.title} className="surface-card p-6">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2F7A3A]">{item.title}</p>
@@ -36,7 +36,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-space section-grid">
+      <section className="cq-section section-space section-grid">
         <div className="container-shell">
           <div className="flex flex-wrap gap-3">
             {heroHighlights.map((item) => (
@@ -49,14 +49,14 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-16 grid gap-12 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+          <div className="cq-split cq-split-main mt-16">
             <SectionHeading
               eyebrow="What we do"
               title="Delivery support for urgent, routine, and specialist logistics"
               description="From small parcels and documents to bulk consignments and repeat business runs, Kamdan provides the vehicle, timing, and visibility needed to keep goods moving."
             />
 
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <div className="cq-grid-3 gap-5">
               {serviceCards.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -74,7 +74,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#020817] py-20 sm:py-24">
+      <section className="cq-section section-space bg-[#020817]">
         <div className="container-shell">
           <SectionHeading
             eyebrow="Why choose Kamdan"
@@ -83,7 +83,7 @@ export default function HomePage() {
             theme="dark"
           />
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="cq-grid-4 mt-12">
             {whyChooseUs.map((item) => {
               const Icon = item.icon;
               return (
@@ -98,7 +98,7 @@ export default function HomePage() {
             })}
           </div>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="cq-grid-3 mt-12">
             {coreStats.map((item, index) => (
               <article
                 key={item.value}
@@ -114,7 +114,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-space bg-white">
+      <section className="cq-section section-space bg-white">
         <div className="container-shell">
           <SectionHeading
             eyebrow="Operational strengths"
@@ -123,7 +123,7 @@ export default function HomePage() {
             align="center"
           />
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="cq-grid-2 mt-12">
             {homeValuePillars.map((item, index) => (
               <article key={item.title} className="surface-card p-8">
                 <span className="inline-flex rounded-full bg-[#031020] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
@@ -137,7 +137,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-space">
+      <section className="cq-section section-space">
         <div className="container-shell">
           <SectionHeading
             eyebrow="Industries served"
@@ -158,7 +158,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-space bg-white">
+      <section className="cq-section section-space bg-white">
         <div className="container-shell">
           <SectionHeading
             eyebrow="FAQ"
@@ -172,17 +172,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section className="cq-section section-space">
         <div className="container-shell">
-          <div className="rounded-[36px] bg-[#031020] px-8 py-12 text-white shadow-panel sm:px-12 sm:py-16">
+          <div className="home-cta-panel rounded-[36px] bg-[#031020] px-8 py-12 text-white shadow-panel">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#b7ebb8]">Ready to move</p>
-            <h2 className="mt-4 max-w-3xl text-balance text-3xl font-semibold sm:text-4xl">
+            <h2 className="home-cta-title mt-4 max-w-3xl text-balance font-semibold">
               Join UK businesses that need delivery support they can trust.
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-300">
               Request a quote, share your route details, and get matched with the right delivery option for the job.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="cq-actions mt-8">
               <Link
                 href="/fleet#quote-form"
                 className="inline-flex items-center rounded-full bg-[#7ed38a] px-6 py-3 text-sm font-semibold text-[#031020] transition hover:bg-[#98dfa1]"

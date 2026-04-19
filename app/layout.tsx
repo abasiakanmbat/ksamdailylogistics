@@ -1,10 +1,8 @@
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import Navigation from "@/components/Navigation";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,31 +13,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-// export const metadata: Metadata = {
-//   title: "KSA M Day Logistics - Reliable Transportation & Logistics Solutions",
-//   description: "Your trusted partner for reliable, efficient, and cost-effective logistics solutions across the region. Freight transportation, warehousing, express delivery, and more.",
-// };
-
-// export default function RootLayout({
-//   children,
-// }: Readonly<{
-//   children: React.ReactNode;
-// }>) {
-//   return (
-//     <html
-//       lang="en"
-//       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-//     >
-//       <body className="min-h-full flex flex-col">
-//         <Navigation />
-//         <main className="flex-1">{children}</main>
-//         <Footer />
-//       </body>
-//     </html>
-//   );
-// }
-
 
 export const metadata: Metadata = {
   title: {
@@ -52,10 +25,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
-      <body className="min-h-screen bg-slate-50 text-slate-950 antialiased">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} data-scroll-behavior="smooth">
+      <body className="cq-page min-h-screen bg-slate-50 text-slate-950 antialiased">
         <SiteHeader />
-        <main>{children}</main>
+        <main className="min-w-0">{children}</main>
         <SiteFooter />
       </body>
     </html>

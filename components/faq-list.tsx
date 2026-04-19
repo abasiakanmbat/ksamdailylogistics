@@ -5,7 +5,7 @@ export function FaqList() {
     <div className="space-y-4">
       {faqs.map((faq) => (
         <details key={faq.question} className="surface-card group p-6">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-lg font-semibold text-slate-950">
+          <summary className="faq-summary">
             {faq.question}
             <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#edf7ee] text-lg font-medium text-[#2F7A3A] transition group-open:bg-[#031020] group-open:text-white">
               +

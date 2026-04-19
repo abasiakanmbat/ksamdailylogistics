@@ -19,7 +19,7 @@ export default function FleetPage() {
         secondaryCta={{ href: "/services", label: "View services" }}
       />
 
-      <section className="section-space bg-white">
+      <section className="cq-section section-space bg-white">
         <div className="container-shell">
           <SectionHeading
             eyebrow="Vehicles"
@@ -28,7 +28,7 @@ export default function FleetPage() {
             align="center"
           />
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="cq-grid-3 mt-12">
             {fleetOptions.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -58,8 +58,8 @@ export default function FleetPage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-24">
-        <div className="container-shell grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+      <section className="cq-section section-space">
+        <div className="container-shell cq-split cq-split-fleet">
           <div>
             <SectionHeading
               eyebrow="Why our fleet stands out"
